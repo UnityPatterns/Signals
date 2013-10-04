@@ -4,9 +4,9 @@ using System.Collections;
 [System.Serializable]
 public class Signal
 {
-	[SerializeField] GameObject target;
-	[SerializeField] string method;
-	[SerializeField] string argType;
+	public GameObject target;
+	public string method;
+	public string argType;
 
 	public Signal()
 	{
