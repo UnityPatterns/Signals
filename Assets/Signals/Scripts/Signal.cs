@@ -17,12 +17,12 @@ public class Signal
 		this.argType = argType.FullName;
 	}
 
-	public void Send()
+	public void Invoke()
 	{
 		if (target != null && !string.IsNullOrEmpty(method))
 			target.SendMessage(method, SendMessageOptions.RequireReceiver);
 	}
-	public void Send(object value)
+	public void Invoke(object value)
 	{
 		if (argType != null)
 		{
@@ -35,7 +35,7 @@ public class Signal
 			}
 		}
 		else
-			Send();
+			Invoke();
 	}
 }
 

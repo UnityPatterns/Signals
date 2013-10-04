@@ -1,8 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Signals\Scripts\Signal.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Signals\Scripts\Editor\SignalDrawer.cs">
     <Files>
-      <File FileName="Assets\Signals\Scripts\Signal.cs" Line="1" Column="1" />
+      <File FileName="Assets\Signals\Scripts\Editor\SignalDrawer.cs" Line="33" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
