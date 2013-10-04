@@ -20,7 +20,7 @@ public class Signal
 	public void Send()
 	{
 		if (target != null && !string.IsNullOrEmpty(method))
-			target.SendMessage(method);
+			target.SendMessage(method, SendMessageOptions.RequireReceiver);
 	}
 	public void Send(object value)
 	{
@@ -29,7 +29,7 @@ public class Signal
 			if (target != null && !string.IsNullOrEmpty(method))
 			{
 				if (argType.Equals(value.GetType().FullName))
-					target.SendMessage(method, value);
+					target.SendMessage(method, value, SendMessageOptions.RequireReceiver);
 				else
 					Debug.LogError("Incorrect parameter type, expected [" + argType + "], got [" + value.GetType().FullName + "].");
 			}
@@ -41,5 +41,14 @@ public class Signal
 
 public class SignalAttribute : System.Attribute
 {
+	public string name;
 
+	public SignalAttribute()
+	{
+
+	}
+	public SignalAttribute(string name)
+	{
+		this.name = name;
+	}
 }

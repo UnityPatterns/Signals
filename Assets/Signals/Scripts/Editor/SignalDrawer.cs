@@ -61,7 +61,16 @@ public class SignalDrawer : PropertyDrawer
 
 						if (addMethod)
 						{
-							names.Add(type.Name + ": " + ObjectNames.NicifyVariableName(method.Name));
+							var attribute = (SignalAttribute)attributes[0];
+							if (string.IsNullOrEmpty(attribute.name))
+							{
+								var name = ObjectNames.NicifyVariableName(method.Name);
+								if (name.Contains("Signal"))
+									name = name.Replace("Signal", "");
+								names.Add(type.Name + ": " + name);
+							}
+							else
+								names.Add(type.Name + ": " + attribute.name);
 							if (methodProperty.stringValue == method.Name)
 								index = methodNames.Count;
 							methodNames.Add(method.Name);
